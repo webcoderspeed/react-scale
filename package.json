@@ -43,8 +43,8 @@
   },
   "lint-staged": {
     "**/*.{js,css,ts,tsx,jsx}": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --write .",
+      "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix"
     ],
     "*.{js,css,ts,tsx,jsx}": "eslint --cache --fix"
   }
