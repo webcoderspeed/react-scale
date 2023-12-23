@@ -1,0 +1,11 @@
+# Directories
+node_modules/
+build/
+coverage/
+
+# Files
+.eslintrc.json
+.eslintrc.js
+.prettierrc.json
+tailwind.config.js
+postcss.config.js

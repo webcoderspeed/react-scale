@@ -1,0 +1,13 @@
+{
+  "git": {
+    "commitMessage": "chore: prod release 🚀 v${version}",
+    "tag": false,
+    "push": true
+  },
+  "github": {
+    "release": false
+  },
+  "npm": {
+    "publish": false
+  }
+}
