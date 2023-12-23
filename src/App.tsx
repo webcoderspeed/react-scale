@@ -1,7 +1,12 @@
 import React from 'react';
+import LanguageSelector from './components/LanguageSelector';
 
 function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <LanguageSelector />
+    </div>
+  );
 }
 
 export default App;
