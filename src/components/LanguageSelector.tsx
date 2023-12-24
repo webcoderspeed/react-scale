@@ -6,12 +6,12 @@ function LanguageSelector() {
   const { handleChangeLanguage } = useLanguageTranslation();
 
   return (
-    <div className='px-4 py-6'>
-      <h1 className='text-xl font-bold mb-4'>Language Selector</h1>
+    <div className='container mx-auto max-w-md p-6 bg-white rounded-md shadow-md'>
+      <h1 className='text-2xl font-bold mb-4 text-center'>Language Selector</h1>
 
       <select
         onChange={(e) => handleChangeLanguage(e.target.value)}
-        className='border-2 border-black rounded-md'
+        className='w-full border-2 border-gray-300 rounded-md p-2'
       >
         <option value='en'>English</option>
         <option value='hi'>Hindi</option>
@@ -20,7 +20,7 @@ function LanguageSelector() {
         <option value='fr'>French</option>
       </select>
 
-      <div className='text-sm py-2 '>{t('quote')}</div>
+      <div className='text-sm mt-4 text-center'>{t('quote')}</div>
     </div>
   );
 }
