@@ -12,7 +12,9 @@
     "prepare": "husky install",
     "release": "release-it --npm.skipChecks=false",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "commit": "git add . && cz && yarn commitlint && git push",
+    "commitlint": "commitlint --from=HEAD~1 --to=HEAD"
   },
   "dependencies": {
     "@storybook/react": "^7.6.6",
@@ -25,6 +27,8 @@
     "vite": "^5.0.8"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-interactions": "^7.6.6",
     "@storybook/addon-links": "^7.6.6",
@@ -37,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
     "autoprefixer": "^10.4.16",
+    "commitizen": "^4.3.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -62,5 +67,10 @@
       "eslint --fix"
     ],
     "*.{js,css,ts,tsx,jsx}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
