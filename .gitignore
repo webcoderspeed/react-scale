@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# End to End Tests
+dist/
+node_modules/
+obj/
+logs/
+*.log
+*.txt
+testresults/
+screenshots/
+package-lock.json
