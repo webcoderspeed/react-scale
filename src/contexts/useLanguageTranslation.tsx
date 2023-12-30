@@ -36,7 +36,11 @@ export default LanguageTranslationProvider;
 export function useLanguageTranslation() {
   const values = useContext(LanguageTranslationContext);
 
-  if (!values) throw new Error();
+  if (!values) {
+    throw new Error(
+      'Make sure to call useLanguageTranslation inside a LanguageTranslationProvider',
+    );
+  }
 
   return values;
 }

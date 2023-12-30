@@ -1,10 +1,10 @@
 import React from 'react';
-import LanguageSelector from './components/LanguageSelector';
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
   return (
-    <div>
-      <LanguageSelector />
+    <div className='py-4'>
+      <ThemeSelector />
     </div>
   );
 }

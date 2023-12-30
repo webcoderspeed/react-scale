@@ -1,5 +1,6 @@
 import React from 'react';
 import LanguageTranslationProvider from './useLanguageTranslation';
+import ThemeProvider from './useTheme';
 
 interface Props {
   providers: (({ children }: { children: React.ReactNode }) => React.JSX.Element)[];
@@ -22,7 +23,7 @@ function AppContext(props: Props) {
 }
 
 function AppProvider({ children }: { children: React.ReactNode }) {
-  const providers = [LanguageTranslationProvider];
+  const providers = [LanguageTranslationProvider, ThemeProvider];
 
   return <AppContext providers={providers}>{children}</AppContext>;
 }
